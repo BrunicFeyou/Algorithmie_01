@@ -53,7 +53,6 @@ for (i = 0; i < combattants.length; i++) {
    console.log(combattant) */
    
 
-
    
     if(combattants[i].type === "defense") {
         let attaquant;
@@ -82,7 +81,11 @@ for (i = 0; i < combattants.length; i++) {
         }
         
       } 
-      
+      if (combattants.every(combattant => combattant.hp < 1)) {
+        mancheattack+= 1
+        console.log(" Tous les défenseurs sont morts. L'attaque gagne "+ mancheattack + " manches")
+      }
+    
       }
          
 
