@@ -75,16 +75,20 @@ for (let i = 0; i < survivants.length; i++) {
     survivants.forEach(survivant => {
         jason.attack(survivant)
     })
+
+    if (survivants.every(survivant => survivant.hp < 1)){
+       
+        console.log ("Tous les survivants sont mort. " +  jason.name + " a gagné");
+        break
+        
+     }
+    
+     if (jason.hp < 1) {
+          console.log ('La vie du tueur est nulle ' + jason.hp + ". Jason est mort")
+          break
+          
+     }
+    
     
 }
 
-if (survivants.every(survivant => survivant.hp < 1)){
-    console.log("La vie de " + survivant.name + survivant.hp)
-    console.log ("Tous les survivants sont mort. " +  jason.name + " a gagné");
-    
- }
-
- if (jason.hp < 1) {
-      console.log ('La vie du tueur est nulle ' + jason.hp + ". Jason est mort")
-      
- }
